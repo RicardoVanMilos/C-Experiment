@@ -3,13 +3,14 @@
 int main(void)
 {
     char c;
-    while (getchar() != EOF)
+    c = getchar();
+    while (c != EOF)
     {
-        c = getchar();
         if ((c >= 'A') && (c <= 'Z'))
             putchar(c + 32);
         else
             putchar(c);
+        c = getchar();
     }
     return 0;
 }

@@ -1,15 +1,21 @@
 #include <stdio.h>
-#include <stdlib.h>
 
 int main(void)
 {
     unsigned long l;
-    int bin[32], tmp;
-    while (getchar() != EOF)
+    
+    union ipaddr
     {
-        scanf("%ld", &l);
-
-        printf("%ld", l);
+        unsigned long i;
+        unsigned char ch[4];
+    };
+    
+    union ipaddr n;
+    
+    while (scanf("%lu", &n.i) != EOF)
+    {
+        printf("%lu\n", l);
+        printf("%hhu.%hhu.%hhu.%hhu\n",n.ch[3],n.ch[2],n.ch[1],n.ch[0]);
     }
     return 0;
 }

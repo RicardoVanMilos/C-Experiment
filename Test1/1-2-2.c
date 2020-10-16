@@ -7,10 +7,9 @@ int main()
     scanf("%d%d", &m, &n);
     if (m < n) /* 交换m和n */
     {
-        int t;
-        t = m;
-        m = n;
-        n = t;
+        m = m ^ n;
+        n = m ^ n;
+        m = m ^ n; 
     }
     k = 0;
     while (m % 2 == 0 && n % 2 == 0) /* m和n均为偶数 */

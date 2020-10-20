@@ -15,11 +15,6 @@ int main(void)
                 flag = 1;
                 break;
             }
-        if (x == 1)
-        {
-            printf("%d is neither prime nor non-prime\n", x);
-            continue;
-        }
         if (x == 2)
         {
             printf("%d is a prime number\n", x);

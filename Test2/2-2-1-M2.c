@@ -13,7 +13,6 @@ int main(void)
             if ((x % i) == 0)
             {
                 flag = 1;
-                break;
             }
         if (x == 2)
         {

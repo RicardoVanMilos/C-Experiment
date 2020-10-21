@@ -17,7 +17,7 @@ int main(void)
 
 long long sum_fac(int n)
 {
-    long long s = 0, fac = 1;
+    long long s = 0 , fac = 1;
     int i;
     for (i = 1; i <= n; i++)
     {

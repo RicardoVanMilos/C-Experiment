@@ -1,44 +1,38 @@
 //Unfinished;
 
 #include <stdio.h>
-double mulx(double x, int n);
-long fac(int n);
-double sum(double x, int n)
-{
-    int i;
-    double z = 1.0;
-    for (i = 1; i <= n; i++)
-    {
-        z = z + mulx(x, i) / fac(i);
-    }
-    return z;
-}
-double mulx(double x, int n)
-{
-    int i;
-    double z = 1.0;
-    for (i = 0; i < n; i++)
-    {
-        z = z * x;
-    }
-    return z;
-}
-long fac(int n)
-{
-    int i;
-    long h = 1;
-    for (i = 2; i <= n; i++)
-    {
-        h = h * i;
-    }
-    return h;
-}
+
+int factx[32768];
+double xlev[32768];
+
+int fac(int n);
+double sum(double x, int n);
+
 int main()
 {
     double x;
     int n;
     printf("Input x and n:");
     scanf("%lf%d", &x, &n);
+    factx[1] = 1;
+    xlev[1] = x;
+    for (int i = 2; i <= n; i++)
+        factx[i] = n * factx[i - 1];
+    for (int i = 2; i <= n; i++)
+        xlev[i] = xlev[i - 1] * x;
+
     printf("The result is %lf:", sum(x, n));
     return 0;
+}
+
+int fac(int n)
+{
+    return factx[n];
+}
+double sum(double x, int n)
+{
+    double sumy = 1;
+    for (int i = 1; i <= n; i++)
+        sumy += (xlev[i] / factx[i]);
+    return sumy;
 }

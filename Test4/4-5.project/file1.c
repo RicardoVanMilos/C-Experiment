@@ -1,8 +1,6 @@
 /*源文件file1.c的内容*/
 #include "file.h"
 
-extern int x, y; /* 外部变量的定义性说明 */
-extern char ch;  /* 外部变量的定义性说明 */
 int x;
 int y;
 char ch;

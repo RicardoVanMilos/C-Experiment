@@ -26,6 +26,6 @@ int isPerfect(int n)
         printf("\n");
     }
     else
-        printf("%d is not a perfect number.\n",n);
+        // printf("%d is not a perfect number.\n",n);
     return 0;
 }

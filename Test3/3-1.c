@@ -10,7 +10,7 @@ int main(void)
     for (k = 1; k <= 20; k++)
     {
         sum = sum_fac(k);
-        printf("k=%d\tthe sum is %lld\n", k, sum);
+        printf("k=%d \tthe sum is %lld\n", k, sum);
     }
     return 0;
 }

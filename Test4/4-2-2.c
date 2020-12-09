@@ -2,7 +2,7 @@
 #include <stdio.h>
 
 int m;
-
+//定义宏函数
 #define maxx(x, y, z) \
     {                 \
         m = z;        \

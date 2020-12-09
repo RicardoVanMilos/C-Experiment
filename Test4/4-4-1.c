@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <math.h>
 
+//宏函数定义
 #define S(a, b, c) ((a + b + c) / 2)
 #define AREA(a, b, c) (sqrt(((a + b + c) / 2) * (((a + b + c) / 2) - a) * (((a + b + c) / 2) - b) * (((a + b + c) / 2) - c)))
 

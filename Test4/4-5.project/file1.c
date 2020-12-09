@@ -1,7 +1,7 @@
 /*源文件file1.c的内容*/
 #include "file.h"
 
-int x;
+int x; //全局变量声明
 int y;
 char ch;
 

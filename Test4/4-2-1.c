@@ -1,6 +1,7 @@
 /*实验4-2程序修改替换题程序*/
 #include <stdio.h>
 
+//子函数声明
 int maxx(int x, int y, int z);
 float summ(float x, float y);
 
@@ -20,7 +21,7 @@ int main(void)
 
 int maxx(int x, int y, int z)
 {
-    int m = z;
+    int m = z; //if语句比较大小
     if (x > m)
         m = x;
     if (y > m)
@@ -30,5 +31,5 @@ int maxx(int x, int y, int z)
 
 float summ(float x, float y)
 {
-    return x + y;
+    return x + y; //实现相加
 }

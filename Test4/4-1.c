@@ -1,4 +1,6 @@
 #include <stdio.h>
+
+//宏函数定义
 #define SUM (a + b)
 #define DIF (a - b)
 #define SWAP(a, b) \

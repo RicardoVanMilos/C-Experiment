@@ -1,4 +1,6 @@
 #include <stdio.h>
+
+//条件编译
 #define CHANGE 1
 
 int main()
@@ -6,9 +8,9 @@ int main()
     char s1[30];
     int i;
     printf("Input:\n");
-    // gets(s1);
+    scanf("%s",&s1);
     printf("Output:\n");
-    if (CHANGE)
+    if (CHANGE) //判断条件
     {
         for (i = 0; i < 30; i++)
             if (s1[i] != '\0')
@@ -16,7 +18,7 @@ int main()
                 if (s1[i] != ' ')
                 {
                     if (s1[i] >= 'a' && s1[i] <= 'z')
-                        s1[i] -= 32;
+                        s1[i] = s1[i]-32;
                     else if (s1[i] >= 'A' || s1[i] <= 'Z')
                         s1[i] += 32;
                 }
